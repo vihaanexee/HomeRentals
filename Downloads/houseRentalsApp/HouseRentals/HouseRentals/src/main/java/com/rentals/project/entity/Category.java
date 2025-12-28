@@ -1,29 +1,29 @@
 package com.rentals.project.entity;
 
-public class Category {
-    private Long CategoryId;
-    private String Categoryname;
 
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
-    public Category(Long categoryId, String categoryname) {
-        this.CategoryId = categoryId;
-        this.Categoryname = categoryname;
-    }
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "categories")
+public class category {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    public String getCategoryname() {
-        return Categoryname;
-    }
+    @Column(nullable = false , length = 30)
+    private String name;
 
-    public void setCategoryname(String categoryname) {
-        this.Categoryname = categoryname;
-    }
+    @Column(length = 500)
+    private String description;
 
-    public Long getCategoryId() {
-        return CategoryId;
-    }
-
-    public void setCategoryId(Long categoryId) {
-        this.CategoryId = categoryId;
-    }
-
+    @Column(nullable = false)
+    private Boolean active = true;
 }
+
+
