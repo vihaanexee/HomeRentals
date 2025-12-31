@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Entity
 @Table(name = "users")
-public class user {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -38,7 +38,7 @@ public class user {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private userRole role = userRole.STUDENT;
+    private UserRole role = UserRole.STUDENT;
 
     @Column(nullable = false)
     private Boolean active = true;

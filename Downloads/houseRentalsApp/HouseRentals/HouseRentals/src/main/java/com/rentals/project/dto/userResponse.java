@@ -1,18 +1,19 @@
 package com.rentals.project.dto;
 
-import com.rentals.project.entity.userRole;
+import com.rentals.project.entity.UserRole;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
 @Data
-public class userResponse {
+@AllArgsConstructor
+public class UserResponse {
     private String firstName;
     private String lastName;
     private String email;
-    private String password;
     private String phoneNo;
-    private userRole role;
+    private UserRole role;
     private Boolean active;
     private LocalDateTime createdAt;
 

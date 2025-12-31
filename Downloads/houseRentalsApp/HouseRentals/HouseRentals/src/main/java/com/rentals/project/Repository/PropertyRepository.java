@@ -1,9 +1,9 @@
 package com.rentals.project.Repository;
 
-import com.rentals.project.entity.Category;
+import com.rentals.project.entity.Property;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CategoryRepository extends JpaRepository<Category, Long> {
+public interface PropertyRepository extends JpaRepository<Property, Long>{
 }

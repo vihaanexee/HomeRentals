@@ -1,5 +1,5 @@
 package com.rentals.project.entity;
 
-public enum userRole {
+public enum UserRole {
     STUDENT , OWNER ,ADMIN
 }

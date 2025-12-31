@@ -1,4 +1,4 @@
 package com.rentals.project.entity;
 
-public class property {
+public class Property {
 }
