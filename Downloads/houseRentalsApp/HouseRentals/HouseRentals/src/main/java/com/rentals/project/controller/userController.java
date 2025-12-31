@@ -16,7 +16,7 @@ public class UserController {
 
     private final UserService userService;
 
-    @PostMapping("api/public/register")
+    @PostMapping("/register" )
     public ResponseEntity<UserResponse> registerUser (@RequestBody UserRegistrationRequest request){
         UserResponse newUser = userService.registerUser((request));
         return ResponseEntity.status(HttpStatus.CREATED).body(newUser);
@@ -34,7 +34,7 @@ public class UserController {
         return ResponseEntity.ok(user);
     }
 
-    @PutMapping("/{id")
+    @PutMapping("/{id}")
     public ResponseEntity<UserResponse> updateUserInfo(@PathVariable Long id , @RequestBody UserRegistrationRequest updatedInfo){
         UserResponse user = userService.updateUserInfo(id, updatedInfo);
         return ResponseEntity.ok(user);
